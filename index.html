@@ -843,7 +843,8 @@
       updateStickyCta();
     }());
   </script>
-<!-- FELIZOLA-SCROLL-MOTION v1 : tasteful scroll motion for the portfolio.
+<!-- FELIZOLA-SCROLL-MOTION v2 : tasteful scroll motion for the portfolio.
+     v2: reveals and count-ups replay every time elements scroll back into view.
      Injected by build.sh. Keep this file as the single source of the motion layer;
      re-running build.sh re-applies it to fresh exports. -->
 <style>
@@ -882,7 +883,8 @@
 
     if (reduceMotion) { revealAll(); return; }
 
-    /* 2. Gentle fade-and-rise reveals, staggered within each parent. */
+    /* 2. Gentle fade-and-rise reveals, staggered within each parent.
+       Replays every time the element scrolls back into view. */
     var SELECTORS = [
       '.hero-grid > *',
       '.section-head',
@@ -911,10 +913,7 @@
     if ('IntersectionObserver' in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fx-in');
-            io.unobserve(entry.target);
-          }
+          entry.target.classList.toggle('fx-in', entry.isIntersecting);
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
       targets.forEach(function (el) { io.observe(el); });
@@ -922,26 +921,26 @@
       revealAll();
     }
 
-    /* 3. Proof stats count up when they scroll into view. */
+    /* 3. Proof stats count up each time they scroll into view. */
     document.querySelectorAll('.proof-num').forEach(function (el) {
       var m = el.textContent.match(/(\d+)(\D*)/);
       if (!m) return;
-      var target = parseInt(m[1], 10), suffix = m[2] || '', started = false;
+      var target = parseInt(m[1], 10), suffix = m[2] || '', running = false;
       function run() {
-        if (started) return; started = true;
+        if (running) return; running = true;
         var start = null, dur = 1200;
         function step(t) {
           if (!start) start = t;
           var p = Math.min((t - start) / dur, 1);
           var eased = 1 - Math.pow(1 - p, 3);
           el.textContent = Math.round(target * eased) + suffix;
-          if (p < 1) requestAnimationFrame(step);
+          if (p < 1) { requestAnimationFrame(step); } else { running = false; }
         }
         requestAnimationFrame(step);
       }
       if ('IntersectionObserver' in window) {
         var cio = new IntersectionObserver(function (es) {
-          es.forEach(function (e) { if (e.isIntersecting) { run(); cio.disconnect(); } });
+          es.forEach(function (e) { if (e.isIntersecting) run(); });
         }, { threshold: 0.4 });
         cio.observe(el);
       } else { run(); }
