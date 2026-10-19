@@ -130,6 +130,26 @@
     .benefits { list-style: none; padding: 0; margin: 0; border-top: 1px solid #45525e; }
     .benefits li { padding: .7rem 0 .7rem 1.2rem; border-bottom: 1px solid #45525e; position: relative; color: #d6dee4; font-size: .9rem; }
     .benefits li::before { content: "+"; position: absolute; left: 0; color: var(--accent); }
+    .teardown-one { background: var(--project-two); }
+    .teardown-two { background: var(--project-three); }
+    .teardown-three { background: var(--project-four); }
+    .brand-line { font-weight: 700; color: var(--ink) !important; }
+    .teardown-body { background: var(--surface); border: 1px solid var(--line-strong); box-shadow: var(--shadow); padding: clamp(1.4rem, 3.5vw, 2.6rem); }
+    .teardown-body .mini-label { margin-bottom: 1rem; }
+    .finding { font-size: 1.08rem; font-weight: 600; line-height: 1.55; max-width: 860px; margin-bottom: 0; }
+    .teardown-subhead { font-size: 1.18rem; font-weight: 800; letter-spacing: -.02em; margin: 2.2rem 0 .4rem; }
+    .leak-list { list-style: none; padding: 0; margin: 0; }
+    .leak-list li { padding: 1.15rem 0; border-bottom: 1px solid var(--line); }
+    .leak-list li:last-child { border-bottom: 0; padding-bottom: .2rem; }
+    .leak-list p { margin: 0; max-width: 860px; }
+    .subject-list { margin: .6rem 0 0; padding-left: 1.5rem; }
+    .subject-list li { margin-bottom: .45rem; max-width: 860px; }
+    .subject-list li:last-child { margin-bottom: 0; }
+    .method { margin: 2.2rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); max-width: 860px; }
+    .teardown-cta-section { background: var(--ink); color: var(--paper); padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+    .teardown-cta { font-size: clamp(1.2rem, 2.4vw, 1.65rem); font-weight: 600; line-height: 1.45; letter-spacing: -.02em; max-width: 920px; margin: 0; }
+    .teardown-cta a { color: var(--paper); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    .teardown-cta a:hover { color: var(--accent); }
     .services { padding-bottom: clamp(5rem, 8vw, 8rem); }
     .service-list { border-top: 1px solid var(--line-strong); }
     .service-row { display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(220px, .8fr) 150px; gap: 1.5rem; align-items: center; padding: 1.55rem 0; border-bottom: 1px solid var(--line); }
@@ -216,7 +236,7 @@
       <a class="brand" href="#top">Addison Felizola</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
+        <li><a href="#work">Work</a></li><li><a href="#teardowns">Teardowns</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
         <li><button class="nav-copy nav-cta" type="button" data-copy-email data-scroll-contact>Hire me</button></li>
       </ul>
     </div>
@@ -277,16 +297,89 @@
       </div><div class="why"><span class="mini-label">Why it works</span><p>Three emails, each doing one job: the timely reminder before the tub runs out, the subscription framed as the path of least resistance, and an honest expiring incentive, together turning a single purchase into a repeat buyer.</p></div>
     </div></article>
 
-    <section class="services" id="services" aria-labelledby="services-title"><div class="wrap section-head"><div class="section-index">02 / Services</div><div><h2 id="services-title">Services</h2></div></div><div class="wrap service-list">
+    <section id="teardowns" aria-labelledby="teardowns-title"><div class="wrap section-head"><div class="section-index">02 / Teardowns</div><div><h2 id="teardowns-title">Teardowns</h2><p>Short public teardowns of real brands' email flows. Written from outside the account, from what any visitor can observe.</p></div></div></section>
+
+    <article class="project teardown teardown-one" aria-labelledby="teardown-1-title"><div class="wrap">
+      <div class="project-intro"><div class="project-number">Teardown 01</div><div class="project-title"><h3 id="teardown-1-title">GRIP6 has the best story in belts. Their welcome email tells none of it.</h3><p class="brand-line">GRIP6 (grip6.com). Belts, wallets, socks. 1,000,000+ customers, lifetime guarantee.</p></div></div>
+      <div class="teardown-body">
+        <p class="mini-label">One-line finding</p>
+        <p class="finding">The brand's best assets (the garage origin story, a million customers, the lifetime guarantee) live on the website. The welcome series is where that story should be earning money, and I could not verify it exists in any real depth.</p>
+        <h4 class="teardown-subhead">The five leaks:</h4>
+        <ol class="leak-list">
+          <li><p><strong>1. Welcome (High).</strong> The welcome email is the highest-attention email a brand sends (Klaviyo's 2025 benchmarks: $2.35 per recipient on average). GRIP6's story is extraordinary: told it could not be done, bought the machines anyway, worked night shifts in a freezing garage, shipped 10,000 belts, now over a million customers with a lifetime guarantee. Nobody buys a belt from a story they never hear. Fix: a 4-email welcome series. Email 1: welcome plus the garage story in 200 words. Email 2: why the belts have no holes (product education). Email 3: a million customers and the best reviews as proof. Email 4: the lifetime guarantee, plainly explained.</p></li>
+          <li><p><strong>2. Cart recovery (High).</strong> Cart recovery averages $3.07 per recipient (Klaviyo 2025), about 30x a regular campaign. Belts are a considered purchase: sizing questions, will it last. GRIP6 already answers all of this in a detailed FAQ. The answers exist; they are just not in the cart emails. Fix: a 3-email sequence that reuses the FAQ. 1 hour: sizing help. 24 hours: lifetime guarantee plus reviews to kill the risk objection. 72 hours: the free-shipping-over-$99 threshold does the closing.</p></li>
+          <li><p><strong>3. Signup (Medium).</strong> The front door works, but it leaves money on the table. Verified in a live browser on Oct 16: a popup appears after about 5 seconds ("Unlock 10% Grip6 Gear," full name plus email, "Get my 10% off"), and the footer has the "Join the GRIP6 Crew" form. Three gaps: there is no SMS capture anywhere, the footer Crew signup still pitches only vague perks (early access, lifetime deals, field-tested tips) with no discount stated, and the popup asks for a full name on top of the email, which is a field of pure friction. Fix: add SMS opt-in to the popup ("restock and drop alerts"), give the footer signup the same 10% teeth as the popup, and drop the full-name field.</p></li>
+          <li><p><strong>4. Win-back (Medium).</strong> One-time belt buyers are the classic satisfied-but-silent segment: they love the product and never think about the brand again until they need a wallet or socks. Fix: a 12-month no-purchase trigger, 3 emails (new products, the socks they have not tried, last call), then suppress non-responders.</p></li>
+          <li><p><strong>5. Second order (Low-Medium).</strong> Here is the insight that matters: lifetime-guarantee belts do not wear out, so the classic reorder playbook does not apply. The repeat opportunity is cross-category, not replenishment. A belt buyer is a proven GRIP6 believer; the socks and wallets lines exist for exactly this customer. Fix: a post-purchase cross-sell series spaced over 60 to 90 days. Sell the ecosystem, not the reorder.</p></li>
+        </ol>
+        <h4 class="teardown-subhead">Sample subject lines (the level I would bring):</h4>
+        <ol class="subject-list">
+          <li>"Welcome to the Crew. Built for life starts here."</li>
+          <li>"The belt built in a freezing garage (our 2-minute story)"</li>
+          <li>"No holes. No flaps. No nonsense. Here is why."</li>
+        </ol>
+        <p class="method"><strong>Methodology note:</strong> From outside the account. First pass October 10, 2026 (homepage, FAQ, signup flow); signup and popup behavior re-verified in a live browser on October 16. I cannot see inside their Klaviyo, so post-signup and cart emails are assessed on what is observable plus what the benchmarks say should exist. Every claim above is something you can check on their site yourself.</p>
+      </div>
+    </div></article>
+
+    <article class="project teardown teardown-two" aria-labelledby="teardown-2-title"><div class="wrap">
+      <div class="project-intro"><div class="project-number">Teardown 02</div><div class="project-title"><h3 id="teardown-2-title">The popup is a card game. The discount is already on the table.</h3><p class="brand-line">Original Grain (originalgrain.com). Watches built from whiskey barrels and reclaimed wood. 27,000+ five-star reviews.</p></div></div>
+      <div class="teardown-body">
+        <p class="mini-label">One-line finding</p>
+        <p class="finding">The site runs on Klaviyo (confirmed) and the traffic is there. Capture exists, but it is a gamified mystery-prize popup while a concrete 15% off is sitting in the sitewide banner, ungated. The automatic emails that drive about 41% of email revenue (Klaviyo 2026 benchmarks) deserve a front door that converts at its best.</p>
+        <h4 class="teardown-subhead">The five leaks:</h4>
+        <ol class="leak-list">
+          <li><p><strong>1. Signup (Medium).</strong> Capture exists, verified in a live browser on Oct 16: a delayed popup ("TRY YOUR LUCK, pick a card to see what you win") with a mystery prize, a footer "JOIN THE OG FAM" form with no stated incentive, and a sitewide banner reading "WHISKEY WEEK SALE: SAVE 15% OFF." The honest observation: the site hands 15% to every visitor through the banner while the popup asks them to play a card game for an unknown prize. Concrete beats mystery. Fix: put the 15% in the popup and the footer form, retire the card game or keep it as a variant to test, and add SMS opt-in (none exists today; the footer "TEXT US" link is customer service, not capture).</p></li>
+          <li><p><strong>2. Welcome (High).</strong> The welcome email is the highest-attention email a brand sends (Klaviyo 2025: $2.35 per recipient on average; top brands $20.92). Two brothers, whiskey barrels, reclaimed wood, building watches since 2013: exactly the story a 4-email welcome series should tell. Right now it lives only on the website, where most visitors never read it. Fix: Email 1 delivers the 15% code plus the brothers' story in plain words. Email 2: the whiskey-barrel craftsmanship. Email 3: 27,000+ reviews as proof plus best sellers. Email 4: your 15% expires soon.</p></li>
+          <li><p><strong>3. Cart recovery (High).</strong> Watches at $220 to $400 (the Whiskey Black Chrono: $254, down from $299). At that price, shoppers browse, hesitate, and leave. That is normal, and it is exactly what cart recovery emails are for: $3.07 per recipient on average, $27.12 for top brands (Klaviyo 2025). At a $254 average price, every recovered cart is a full-price sale. Fix: 3 emails. 1 hour: friendly reminder. 24 hours: reviews plus the barrel story to answer "is it worth $254." 72 hours: a small incentive to close, only if margins allow.</p></li>
+          <li><p><strong>4. Second order (Medium).</strong> The first order is the expensive one to win; the second is where the profit lives. A watch is giftable and collectible, and the limited partnership drops (Jack Daniel's, Taylor Guitars, Remington) are built-in reasons for a past buyer to come back. Fix: post-purchase series (thank-you plus a watch care guide, review request at day 14), then early access to each partnership drop for past buyers.</p></li>
+          <li><p><strong>5. Win-back (Medium).</strong> Old buyers who go quiet drag down email performance and represent recovered revenue sitting idle. Fix: a 90-day no-purchase trigger, 3 emails (the story, new partnership-drop news, last-call offer), then stop emailing non-responders so the list stays clean.</p></li>
+        </ol>
+        <h4 class="teardown-subhead">Sample subject lines (the level I would bring):</h4>
+        <ol class="subject-list">
+          <li>"Your wrist called. It wants the full story."</li>
+          <li>"Still deciding? Here is what 27,000 reviewers say."</li>
+          <li>"The barrel is empty: your 15% expires tonight."</li>
+        </ol>
+        <p class="method"><strong>Methodology note:</strong> From outside the account. First pass October 10, 2026 (homepage, fall sale landing page, product page, footer); signup and popup behavior re-verified in a live browser on October 16. I cannot see inside their Klaviyo, so post-signup and cart emails are assessed on what is observable plus what the benchmarks say should exist. Every claim above is something you can check on their site yourself.</p>
+      </div>
+    </div></article>
+
+    <article class="project teardown teardown-three" aria-labelledby="teardown-3-title"><div class="wrap">
+      <div class="project-intro"><div class="project-number">Teardown 03</div><div class="project-title"><h3 id="teardown-3-title">The front door is fixed. The welcome mat is still missing.</h3><p class="brand-line">Hiyo (drinkhiyo.com). Non-alcoholic social tonics. 12,000+ five-star reviews.</p></div></div>
+      <div class="teardown-body">
+        <p class="mini-label">One-line finding</p>
+        <p class="finding">The good news first: capture exists and it is solid (verified Oct 16, details below). That makes the real question what happens after signup. The welcome email is the highest-attention email a brand sends, and Hiyo's story (three founders, family experiences with alcohol, "the float") is exactly what a welcome series should be telling. From outside the account, I could not verify that series exists in any real depth. The front door is open; the welcome mat is the leak now.</p>
+        <h4 class="teardown-subhead">The five leaks:</h4>
+        <ol class="leak-list">
+          <li><p><strong>1. Signup (Low).</strong> This one got fixed between my first look and now, and I will say so plainly: my October 10 pass found no signup, but a live-browser re-check on October 16 found a delayed popup ("15% off, straight up!", 15% off the first order, appears after 10 to 15 seconds) and a footer signup ("sign up to get 15% off your first sip"). That is a real front door with a real incentive. Remaining gap: no confirmed SMS capture (the popup's code hints at a possible text step after email, but I did not submit the form, so that is unverified). Fix: confirm or add the SMS step; the list is worth more with both channels.</p></li>
+          <li><p><strong>2. Welcome (High).</strong> With capture in place, this is now the biggest leak. The welcome email is the highest-attention email a brand sends ($2.35 per recipient on average, Klaviyo 2025; top brands $20.92). Three founders, family experiences with alcohol, "the float": exactly the story a welcome series should tell over 4 emails. Right now it is only on the website. Fix: Email 1 delivers the 15% code plus "what is the float" in plain words. Email 2: the founder story. Email 3: best flavors plus 12,000+ reviews as proof. Email 4: your 15% expires soon.</p></li>
+          <li><p><strong>3. Cart recovery (High).</strong> Nine products at $44.99 with one flavor sold out: the classic setup where shoppers browse, hesitate, and leave. Cart recovery is the highest-earning automatic email there is ($3.07 per recipient on average, $27.12 for top brands, Klaviyo 2025). Fix: 3 emails. 1 hour: friendly reminder. 24 hours: reviews plus the float explanation to answer the hesitation. 72 hours: a small incentive to close, only if margins allow.</p></li>
+          <li><p><strong>4. Second order (Medium).</strong> Reviewers mention subscribing (24 a month), so a repeat-purchase program exists. But a $44.99 consumable is a natural reorder product, and reorders that depend on memory happen late or never. Fix: post-purchase series (thank-you plus how to get the most from the first pack, review request at day 14), then a subscription nudge timed to when a pack runs out.</p></li>
+          <li><p><strong>5. Win-back (Medium).</strong> Lapsed buyers drag down email performance and represent recovered revenue sitting idle. Fix: a 90-day no-purchase trigger, 3 emails (reminder of the float, new flavor news, last-call offer), then stop emailing non-responders so the list stays clean.</p></li>
+        </ol>
+        <h4 class="teardown-subhead">Sample subject lines (the level I would bring):</h4>
+        <ol class="subject-list">
+          <li>"Your first float is on us (15% inside)"</li>
+          <li>"What 12,000+ five-star reviews already know"</li>
+          <li>"The 1.7g difference: what 'the float' actually feels like"</li>
+        </ol>
+        <p class="method"><strong>Methodology note:</strong> From outside the account. First pass October 10, 2026 (homepage, full shop page); signup and popup behavior re-verified in a live browser on October 16, which corrected the first pass (the 15% popup appears after 10 to 15 seconds, invisible to the first tool). I cannot see inside their Klaviyo, so post-signup and cart emails are assessed on what is observable plus what the benchmarks say should exist. Every claim above is something you can check on their site yourself.</p>
+      </div>
+    </div></article>
+
+    <section class="teardown-cta-section" aria-label="Get a free Five-Leak Audit"><div class="wrap"><p class="teardown-cta">Want this for your brand? I do a free Five-Leak Audit: a written teardown of your signup, welcome, checkout, second-order, and win-back emails, delivered in 48 hours. Email: <a href="mailto:addisonfelizola@gmail.com">addisonfelizola@gmail.com</a></p></div></section>
+
+    <section class="services" id="services" aria-labelledby="services-title"><div class="wrap section-head"><div class="section-index">03 / Services</div><div><h2 id="services-title">Services</h2></div></div><div class="wrap service-list">
       <div class="service-row"><div class="service-num">01</div><div class="service-name">Flow Setup Package</div><div class="service-desc">Welcome sequence (3 emails) plus cart-abandonment sequence (3 emails), copy written and built directly inside your Klaviyo account. Two revision rounds included.</div><div class="service-price">$450</div></div>
     </div></section>
 
-    <section class="packs" aria-labelledby="packs-title"><div class="wrap section-head"><div class="section-index">03 / Template packs</div><div><h2 id="packs-title">Email Template Packs</h2><p>Ready-made email copy for coffee brands that want a strong starting point.</p></div></div><div class="wrap">
+    <section class="packs" aria-labelledby="packs-title"><div class="wrap section-head"><div class="section-index">04 / Template packs</div><div><h2 id="packs-title">Email Template Packs</h2><p>Ready-made email copy for coffee brands that want a strong starting point.</p></div></div><div class="wrap">
       <div class="bundle"><div><div class="mini-label">Complete coffee email bundle</div><h3>All 8 packs in one practical library.</h3><p>Get every pack and save $73 compared with buying them separately.</p><a class="btn store-link" href="https://addisonfelizola.gumroad.com" target="_blank" rel="noopener noreferrer">Browse the Gumroad store ↗</a></div><div class="bundle-price">$79</div></div>
       <div class="pack-grid" aria-label="Individual email template packs"><div class="pack"><span class="pack-num">01</span><span class="pack-name">Welcome Email Pack</span><span class="pack-price">$19</span></div><div class="pack"><span class="pack-num">02</span><span class="pack-name">Abandoned Cart Recovery Pack</span><span class="pack-price">$19</span></div><div class="pack"><span class="pack-num">03</span><span class="pack-name">Post-Purchase Pack</span><span class="pack-price">$19</span></div><div class="pack"><span class="pack-num">04</span><span class="pack-name">Win-Back Pack</span><span class="pack-price">$19</span></div><div class="pack"><span class="pack-num">05</span><span class="pack-name">New Drop Launch Pack</span><span class="pack-price">$19</span></div><div class="pack"><span class="pack-num">06</span><span class="pack-name">Sale &amp; Promo Pack</span><span class="pack-price">$19</span></div><div class="pack"><span class="pack-num">07</span><span class="pack-name">Coffee Subscription Pack</span><span class="pack-price">$19</span></div><div class="pack"><span class="pack-num">08</span><span class="pack-name">Holiday Gift Guide Pack</span><span class="pack-price">$19</span></div></div>
     </div></section>
 
-    <section class="about" id="about" aria-labelledby="about-title"><div class="wrap about-grid"><div class="section-index">04 / About</div><div><h2 id="about-title">About</h2><p>I'm Addison Felizola, a Klaviyo Email Copywriter + Flow Builder for DTC brands. Turn new subscribers into buyers, recover abandoned carts, and bring past customers back - with email copy built for DTC brands.</p></div></div></section>
+    <section class="about" id="about" aria-labelledby="about-title"><div class="wrap about-grid"><div class="section-index">05 / About</div><div><h2 id="about-title">About</h2><p>I'm Addison Felizola, a Klaviyo Email Copywriter + Flow Builder for DTC brands. Turn new subscribers into buyers, recover abandoned carts, and bring past customers back - with email copy built for DTC brands.</p></div></div></section>
     <section class="contact" id="contact" aria-labelledby="contact-title"><div class="wrap"><p class="eyebrow">Currently booking new clients</p><h2 id="contact-title">Let's work together</h2><p>Email me for a free Five-Leak Audit, a written teardown of your flows delivered in 48 hours:</p><div class="contact-actions"><button class="email-copy" type="button" data-copy-email>addisonfelizola@gmail.com</button><a class="linkedin-link" href="https://www.linkedin.com/in/addison-felizola-602285406" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div><div class="copy-note">Click the email address to copy it.</div></div></section>
   </main>
   <footer><div class="wrap footer-inner"><span>© 2026 Addison Felizola · SPEC WORK PORTFOLIO</span><button class="back-top" type="button">Back to top</button></div></footer>
@@ -355,6 +448,7 @@
       '.pain',
       '.project-intro',
       '.email-card',
+      '.teardown-body',
       '.why',
       '.service-row',
       '.bundle',
