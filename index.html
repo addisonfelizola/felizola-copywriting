@@ -334,6 +334,8 @@ td.highlight{background:#EFE9DB;font-weight:500}
 .day.avail{background:var(--sage-pale);font-weight:700}
 .day.avail:hover{background:var(--sage-dark);color:#fff}
 .day.sel{background:var(--navy);color:#fff;font-weight:700}
+.day:disabled{opacity:.35;cursor:not-allowed;background:transparent}
+.day:disabled:hover{background:transparent}
 .time-btn{width:100%;padding:12px;margin-bottom:8px;border-radius:10px;border:1px solid var(--line);background:#fff;font-size:15px;font-family:"Inter",sans-serif;transition:.25s;text-align:center}
 .time-btn:hover{border-color:var(--navy);background:var(--sage-pale)}
 .time-btn.selected{background:var(--sage-dark);color:#fff;font-weight:700;border-color:var(--sage-dark)}
@@ -510,8 +512,8 @@ footer{padding:48px 28px 96px;text-align:center;font-size:15px;opacity:.8;line-h
     </div>
     <p id="flowNote" style="font-style:italic;margin:16px 2px 0;font-size:16.5px;line-height:1.5">Now viewing: <b>Post-purchase</b> - the flow most brands underuse, and often the easiest place to earn a repeat order.</p>
     <div class="two-col">
-      <div><div class="flow-label">Campaigns</div><div class="pill-row"><span class="pill">Product launches</span><span class="pill">Sales and promos</span><span class="pill">Newsletters</span><span class="pill muted">Education and stories</span><span class="pill muted">Proof and reviews</span></div></div>
-      <div><div class="flow-label">Behind the scenes</div><div class="pill-row"><span class="pill">Segmentation</span><span class="pill">A/B testing</span><span class="pill">Sign-up forms and list growth</span><span class="pill muted">Account audits</span></div></div>
+      <div><div class="flow-label">Campaigns</div><div class="pill-row"><span class="pill">Product launches</span><span class="pill">Sales and promos</span><span class="pill">Newsletters</span><span class="pill muted">Education and stories</span><span class="pill muted">Proof and reviews</span><span class="pill">Press &amp; social proof</span><span class="pill muted">Multi-market sends</span></div></div>
+      <div><div class="flow-label">Behind the scenes</div><div class="pill-row"><span class="pill">Segmentation</span><span class="pill">A/B testing</span><span class="pill">Sign-up forms and list growth</span><span class="pill muted">Account audits</span><span class="pill">Compliant copy</span><span class="pill muted">Reporting</span></div></div>
     </div>
     <div class="stat-bars">
       <div class="stat-bar reveal-child"><strong>66</strong><span>brands audited with the Five-Leak system</span></div>
@@ -553,7 +555,7 @@ footer{padding:48px 28px 96px;text-align:center;font-size:15px;opacity:.8;line-h
     <div class="wrap" style="max-width:1280px">
     <div class="review-head"><h2><span style="text-transform:uppercase">What</span> <i>my clients</i><br><i>are</i> <span style="text-transform:uppercase;text-decoration:underline;text-decoration-color:var(--sage);text-underline-offset:6px">Saying</span></h2><div class="arrows"><button class="arrow-btn" id="prevReview" aria-label="Previous review">←</button><button class="arrow-btn" id="nextReview" aria-label="Next review">→</button></div></div>
     <div class="review-grid" id="reviewGrid">
-      <article class="review-card reveal-child"><div class="stars">★★★★★</div><p>Five-star project on Upwork for CoSell. The brief needed copy that sounded clear and human for a creator-focused audience, and that is exactly what was delivered. A smooth, direct working process from start to finish.</p><div class="review-who"><div class="who-av">TB</div><div><b>Tatyana Gramatikova Bonneau</b><span>Founder, CoSell - October 2026</span></div></div></article>
+      <article class="review-card reveal-child"><div class="stars">★★★★★</div><p>5-star review from a client project on Upwork, October 2026. Founder, CoSell.</p><div class="review-who"><div class="who-av">TB</div><div><b>Tatyana Gramatikova Bonneau</b><span>Founder, CoSell - October 2026</span></div></div></article>
       <article class="review-card reveal-child"><div class="stars">★★★★★</div><p>Currently booking new DTC projects. If we work together, this is the standard I aim for: clear notes, honest timelines, copy you can actually use, and a flow that is built in Klaviyo - not just handed over as a doc. The next review here could be yours.</p><div class="review-who"><div class="who-av">AF</div><div><b>Your brand here</b><span>Now booking - $450 core package</span></div></div></article>
     </div>
     <p style="font-size:14.5px;opacity:.7;margin-top:14px">Review shown from a real client project on Upwork. Second card is an open booking slot, not a past client quote.</p>
@@ -583,7 +585,7 @@ footer{padding:48px 28px 96px;text-align:center;font-size:15px;opacity:.8;line-h
         <div class="faq-item open"><button class="faq-q"><span>Do you write everything yourself?</span><span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. I research, write, and build every email myself. You will not be handed off to someone else after the first call. That is the whole point of hiring a freelancer at this size.</div></div></div>
         <div class="faq-item"><button class="faq-q"><span>Which platforms do you work in?</span><span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Klaviyo and Shopify are my main tools. That is where most DTC brands I audit and write for already live, so I can go from copy to a live flow without a messy hand-off.</div></div></div>
         <div class="faq-item"><button class="faq-q"><span>What is the Five-Leak Audit?</span><span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">It is a check of five common places where email revenue slips away: welcome, cart, post-purchase, campaign targeting, and win-back. You get a plain-language write-up with what to fix first and why.</div></div></div>
-        <div class="faq-item"><button class="faq-q"><span>How do we get started?</span><span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Send me a note below or book a short intro call. Tell me a bit about your brand and your list. I reply myself, usually with a couple of clear next steps and whether the $450 package or an audit is the better start.</div></div></div>
+        <div class="faq-item"><button class="faq-q"><span>How do we get started?</span><span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Book a short intro call on the calendar above, or email me directly. Tell me a bit about your brand and your list. I reply myself, usually with a couple of clear next steps and whether the $450 package or an audit is the better start.</div></div></div>
       </div>
     </div>
   </section>
@@ -606,7 +608,7 @@ footer{padding:48px 28px 96px;text-align:center;font-size:15px;opacity:.8;line-h
   </section>
 </main>
 
-<footer>Felizola Copywriting - Addison Felizola, Tacoma, WA - Email copy for DTC brands on Shopify and Klaviyo<br><span style="font-size:13.5px">Five-Leak Audit - Flows, campaigns, and audits written by hand, by me.</span></footer>
+<footer>Felizola Copywriting - Addison Felizola, Tacoma, WA - Email copy for DTC brands on Shopify and Klaviyo<br><a href="https://www.linkedin.com/in/addisonfelizola/" style="color:inherit">LinkedIn</a><br><span style="font-size:13.5px">Five-Leak Audit - Flows, campaigns, and audits written by hand, by me.</span></footer>
 <a class="book-float" href="#contact">📅 Book a call</a>
 
 <script>
@@ -671,9 +673,9 @@ window.addEventListener('resize',function(){ var open=document.querySelector('.f
 // calendar build
 function suffix(d){ if(d>=11&&d<=13) return 'th'; switch(d%10){case 1:return 'st';case 2:return 'nd';case 3:return 'rd';default:return 'th';} }
 var calDays=document.getElementById('calDays');
-var pickedDay='Tue Nov 10';
+var pickedDay='November 10, 2026';
 var daysInNov=30;
-var avail=[10,11,12,17,18,19,24,25,26];
+var avail=[3,4,5,10,11,12,17,18,19,24,25,26]; // Tue, Wed, Thu only in November 2026
 var weekdays=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 // Nov 1 2026 is Sunday
 for(var d=1; d<=daysInNov; d++){
@@ -682,11 +684,13 @@ for(var d=1; d<=daysInNov; d++){
     b.className='day'+(avail.indexOf(day)>-1?' avail':'')+(day===10?' sel':'');
     b.textContent=day;
     b.setAttribute('aria-label','November '+day+', 2026');
+    if(avail.indexOf(day)===-1){ b.disabled=true; b.setAttribute('aria-disabled','true'); }
     b.addEventListener('click',function(){
+      if(b.disabled) return;
       document.querySelectorAll('.day').forEach(function(x){ x.classList.remove('sel'); });
       b.classList.add('sel');
       var wd=weekdays[(day-1)%7];
-      pickedDay=wd+' Nov '+day;
+      pickedDay='November '+day+', 2026';
       document.getElementById('calSideTitle').textContent=wd+' '+day+suffix(day);
       document.getElementById('calMsg').textContent='Selected: November '+day+', 2026. Pick a time on the right, then confirm by email below.';
       document.querySelectorAll('.time-btn').forEach(function(t){ t.classList.remove('selected'); });
@@ -703,7 +707,7 @@ document.querySelectorAll('.time-btn').forEach(function(btn){
     document.getElementById('calMsg').textContent='Time picked: '+btn.textContent+'. Now tap the email button below to confirm it with me.';
     var emailBtn=document.getElementById('emailBtn');
     if(emailBtn){
-      emailBtn.href='mailto:addisonfelizola@gmail.com?subject='+encodeURIComponent('Intro call - '+pickedDay+' at '+btn.textContent)+'&body='+encodeURIComponent('Hi Addison, I would like to book the free 30-minute intro call on '+pickedDay+', 2026 at '+btn.textContent+' (America/Los Angeles). A bit about my brand: ');
+      emailBtn.href='mailto:addisonfelizola@gmail.com?subject='+encodeURIComponent('Intro call - '+pickedDay+' at '+btn.textContent)+'&body='+encodeURIComponent('Hi Addison, I would like to book the free 30-minute intro call on '+pickedDay+' at '+btn.textContent+' (America/Los Angeles). A bit about my brand: ');
     }
   });
 });
